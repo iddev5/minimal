@@ -53,9 +53,9 @@ make -j $NUM_JOBS install DESTDIR=$DEST_DIR
 
 # Symnlink wide character libraries
 cd $DEST_DIR/usr/lib
-ln -s libncursesw.so.5 libncurses.so.5
+ln -s libncursesw.so.6.1 libncurses.so.5
 ln -s libncurses.so.5 libncurses.so
-ln -s libtinfow.so.5 libtinfo.so.5
+ln -s libtinfow.so.6.1 libtinfo.so.5
 ln -s libtinfo.so.5 libtinfo.so
 
 echo "Reducing '$BUNDLE_NAME' size."

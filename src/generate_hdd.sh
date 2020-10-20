@@ -17,7 +17,7 @@ elif [ "$1" = "-f" -o "$1" = "--folder" ] ; then
 
   rm -f hdd.img
   truncate -s 20M hdd.img
-  echo "Created new hard disk image file 'hdd.img' with 20MB size."
+  echo "Created new hard disk image file 'hdd.img' with 50MB size."
 
   LOOP_DEVICE=$(losetup -f)
   losetup $LOOP_DEVICE hdd.img
@@ -57,7 +57,7 @@ elif [ "$1" = "-s" -o "$1" = "--sparse" ] ; then
   fi
 
   rm -f hdd.img
-  truncate -s 20M hdd.img
+  truncate -s 50M hdd.img
   echo "Created new hard disk image file 'hdd.img' with 20MB size."
 
   LOOP_DEVICE_HDD=$(losetup -f)
