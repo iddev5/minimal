@@ -20,7 +20,7 @@ cmd="qemu-system-$ARCH -m 256M -cdrom minimal_linux_live.iso -boot d -vga std"
 
 if [ "$1" = "-hdd" -o "$1" = "-h" ] ; then
   echo "Starting QEMU with attached ISO image and hard disk."
-  #$cmd -hda hdd.img
+#  $cmd -hda hdd.img
   $cmd -drive file=hdd.img,index=0,media=disk,format=raw
 else
   echo "Starting QEMU with attached ISO image."
